@@ -12,9 +12,9 @@ worker_ipconf_name    = "ansible-worker-ipconfig"
 
 # VM details
 
-publisher = "Canonical"
-offer     = "UbuntuServer"
-sku       = "19.04"
+publisher = "RedHat"
+offer     = "RHEL"
+sku       = "8.2"
 range     = "latest"
 os_type   = "Standard_ds1_v2"
 username  = "ansible"

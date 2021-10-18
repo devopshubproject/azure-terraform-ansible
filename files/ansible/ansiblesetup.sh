@@ -4,19 +4,20 @@
 #echo "ansible ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/sysops
 
 ### Package Update
-sudo apt-get update
-sudo apt-get upgrade -y
+sudo yum update
+sudo yum upgrade -y
 
 ### Install dependencies
-sudo apt install -y software-properties-common
+#sudo yum install epel-release
 
-### Update repository
-sudo add-apt-repository --yes --update ppa:ansible/ansible
-sudo apt-get update -y
+### Uninstall Python older version
+sudo dnf remove python3 -y
 
 ### Python - pip install
-sudo apt-get install python3-pip -y
-sudo apt-get install ansible -y
+sudo yum install python3.8 -y
+sudo yum install python38-pip -y
+pip3 install pip
+pip3 install ansible
 
 ### Check the ansible version
 ansible --version
