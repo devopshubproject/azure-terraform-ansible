@@ -11,7 +11,7 @@ sudo yum upgrade -y
 #sudo yum install epel-release
 
 ### Uninstall Python older version
-sudo dnf remove python3 -y
+#sudo dnf remove python3
 
 ### Python - pip install
 sudo yum install python3.8 -y
